@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listNotesFragment">
+
+    <fragment
+        android:id="@+id/listNotesFragment"
+        android:name="com.gazim.lightnote.ui.list_notes.ListNotesFragment"
+        android:label="fragment_list_notes"
+        tools:layout="@layout/fragment_list_notes" >
+        <action
+            android:id="@+id/action_listNotesFragment_to_actionWithNotesFragment"
+            app:destination="@id/actionWithNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionWithNotesFragment"
+        android:name="com.gazim.lightnote.ui.action_with_notes.ActionWithNotesFragment"
+        android:label="fragment_action_with_notes"
+        tools:layout="@layout/fragment_action_with_notes" >
+        <action
+            android:id="@+id/action_actionWithNotesFragment_to_listNotesFragment"
+            app:destination="@id/listNotesFragment"
+            app:popUpTo="@id/listNotesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

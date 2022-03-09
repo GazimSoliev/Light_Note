@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.action_with_notes.ActionWithNotesFragment">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_margin="24dp"
+            android:id="@+id/et_add_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-black"
+            android:hint="Title"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:maxLines="2"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.02"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="24dp" />
+
+        <EditText
+            android:layout_marginHorizontal="24dp"
+            android:id="@+id/et_add_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:hint="Description"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_add_title"
+            app:layout_constraintVertical_bias="0.02"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="24dp" />
+
+    </TableLayout>
+
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText,TextContrastCheck"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText,TextContrastCheck"
+            android:layout_marginHorizontal="24dp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText,TextContrastCheck"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </TableRow>
+
+
+</FrameLayout>
